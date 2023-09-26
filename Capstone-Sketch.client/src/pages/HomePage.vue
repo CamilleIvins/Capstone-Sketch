@@ -16,7 +16,7 @@
       outline-offset: -3px;
     }
   </style> -->
-  <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+  <!-- <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <div class="home-card p-5 bg-white rounded elevation-3">
       <img src="https://bcw.blob.core.windows.net/public/img/8600856373152463" alt="CodeWorks Logo"
         class="rounded-circle">
@@ -24,10 +24,10 @@
         Vue 3 Starter
       </h1>
     </div>
-  </div>
+  </div> -->
 
 
-  <section class="container-fluid">
+  <section class="container-fluid bg-img">
     <!-- logo and map that routes to map page -->
    
       <section class="row justify-content-around">
@@ -97,4 +97,12 @@ export default {
     [class*="col-"] {
       outline: 2px dotted forestgreen;
       outline-offset: -3px;}
+
+      .bg-img {
+  // Uncomment after change text color
+  background-image: url(../assets/img/Geo-Stache-logo.png);
+height: 20vh;
+ 
+ 
+}
 </style>
