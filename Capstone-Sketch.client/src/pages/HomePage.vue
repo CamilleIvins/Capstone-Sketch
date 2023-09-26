@@ -1,21 +1,21 @@
 <template>
-  <style>
-    body.debug .container,
-    body.debug .container-fluid {
+  <!-- <style>
+    main.debug .container,
+    main.debug .container-fluid {
       outline: 2px double blue;
       outline-offset: -2px;
     }
 
-    body.debug .row {
+    main.debug .row {
       outline: 2px dashed red;
       outline-offset: -2px;
     }
 
-    body.debug [class*="col-"] {
+    main.debug [class*="col-"] {
       outline: 2px dotted forestgreen;
       outline-offset: -3px;
     }
-  </style>
+  </style> -->
   <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <div class="home-card p-5 bg-white rounded elevation-3">
       <img src="https://bcw.blob.core.windows.net/public/img/8600856373152463" alt="CodeWorks Logo"
@@ -25,6 +25,34 @@
       </h1>
     </div>
   </div>
+
+
+  <section class="container-fluid">
+    <!-- logo and map that routes to map page -->
+   
+      <section class="row justify-content-around">
+        <div class="col-5">
+          LOGO
+
+        </div>
+        <div class="col-6">
+          Map/link to map page
+
+        </div>
+      </section>
+<!-- photo and stache chart with links to popular staches -->
+      <section class="row justify-content-around">
+
+        <div class="col-6">
+         Generic Pic
+
+        </div>
+        <div class="col-5">
+          Stache chart
+
+        </div>
+      </section>
+  </section>
 </template>
 
 <script>
@@ -55,4 +83,18 @@ export default {
     }
   }
 }
+
+.container,.container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
+
+   .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
+
+    [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;}
 </style>
