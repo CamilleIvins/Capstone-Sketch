@@ -27,24 +27,33 @@
   </div> -->
 
 
-  <section class="container-fluid bg-img">
+  <section class="container">
+    <!-- <img src="../assets/img/Geo-Stache-logo.png" style="height: 800px;" alt=""> -->
     <!-- logo and map that routes to map page -->
    
-      <section class="row justify-content-around">
+      <section class="row justify-content-around my-2">
         <div class="col-5">
-          LOGO
+          <img class="logo" src="../assets/img/GeoStache.png" alt="">
 
         </div>
-        <div class="col-6">
-          Map/link to map page
-
+        <div class="col-6 position-relative p-0">
+          <!-- Map/link to map page -->
+          <img class="map-link" src="https://c1.wallpaperflare.com/preview/97/283/810/boise-idaho-overhead-view-public-domain.jpg" alt="">
+          <div class="frosted-card">
+            <h1 class="ps-2">Start your search <span class="mdi mdi-arrow-down-right-bold text-light"></span></h1>
+          </div>
         </div>
       </section>
 <!-- photo and stache chart with links to popular staches -->
-      <section class="row justify-content-around">
+      <section class="row justify-content-around my-2">
 
-        <div class="col-6">
-         Generic Pic
+        <div class="col-6 p-0">
+          <div class="row justify-content-center">
+            <button class="btn create my-3 col-8 col-md-7">
+              Post a Stache
+            </button>
+          </div>
+        <img class="homepage-pic" src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/topeka/Geocache_Lego_guy_ab282473-4f3c-43cf-ad96-5b676481fb3c.jpg" alt="">
 
         </div>
         <div class="col-5">
@@ -84,6 +93,62 @@ export default {
   }
 }
 
+.logo{
+  max-width: 100%;
+  // filter:drop-shadow (0 0 0.75rem crimson)
+  filter: drop-shadow(3px 8px 7px #292828);
+}
+.map-link{
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+object-position: center;
+box-shadow: 0 3px 3px -1px rgba(43, 43, 43, 0.85), 
+  0 5px 6px 0 rgba(43, 43, 43, 0.79), 
+  0 1px 8px 0 rgba(43, 43, 43, 0.79);
+}
+.map-link:hover{
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+object-position: center;
+transform: scale(1.03);
+transition: ease .35s;
+box-shadow: 0 0 10px 3px rgba(205, 205, 205, 0.85),
+inset 0 0 5px 5px rgba(205, 205, 205, 1);
+  // 0 5px 6px 0 rgba(205, 205, 205, 0.79)
+}
+
+.frosted-card{
+  backdrop-filter: blur(5px);
+    background-color: rgba(219, 220, 221, 0.592);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+// .frosted-card:hover{
+//   backdrop-filter: blur(5px);
+//     background-color: rgba(219, 220, 221, 0.592);
+//     border-top-left-radius: 5px;
+//     border-top-right-radius: 5px;
+//     top: 0;
+//     position: absolute;
+//     width: 100%;
+//     transform: scale(1.03);
+// transition: ease .35s;
+// }
+
+.homepage-pic{
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+object-position: center;
+box-shadow: 0 3px 3px -1px rgba(43, 43, 43, 0.85), 
+  0 5px 6px 0 rgba(43, 43, 43, 0.79), 
+  0 1px 8px 0 rgba(43, 43, 43, 0.79);
+}
 .container,.container-fluid {
       outline: 2px double blue;
       outline-offset: -2px;
@@ -98,11 +163,22 @@ export default {
       outline: 2px dotted forestgreen;
       outline-offset: -3px;}
 
-      .bg-img {
-  // Uncomment after change text color
-  background-image: url(../assets/img/Geo-Stache-logo.png);
-height: 20vh;
+  button.create{
+    background-color: #fe9030;
+  }
+  button.create:hover{
+    background-color: rgb(254, 144, 48);
+    box-shadow: 0 0 10px 2px rgb(254, 144, 48);
+  }
+
+
+//       img {
+//   // Uncomment after change text color
+//   background-image: url(/assets/img/Geo-Stache-logo.png);
+//   object-fit: contain;
+//   object-position: center;
+//   max-height: 800px;
  
  
-}
+// }
 </style>

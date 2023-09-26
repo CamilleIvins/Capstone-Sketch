@@ -34,11 +34,13 @@ export default {
 .bg-img {
   // Uncomment after change text color
   // background-image: url(https://images.unsplash.com/photo-1554755229-ca4470e07232?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
-  background-image: url(https://images.unsplash.com/photo-1520299607509-dcd935f9a839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80);
+  background-image:url("https://images.unsplash.com/photo-1520299607509-dcd935f9a839?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80");
+// background-image: url("./assets/img/Geo-Stache-bg-Copy.png");
   object-position: right;
   object-fit: cover;
   background-attachment: fixed;
   min-height: 100vh;
+  width: 100%;
 }
 footer {
   display: grid;
@@ -46,3 +48,4 @@ footer {
   height: 32px;
 }
 </style>
+<!-- url("./assets/img/Geo-Stache-logo.png"),  -->
