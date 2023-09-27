@@ -13,7 +13,7 @@
           <!-- Map/link to map page -->
           <img class="map-pic" src="https://c1.wallpaperflare.com/preview/97/283/810/boise-idaho-overhead-view-public-domain.jpg" alt="">
           <div class="frosted-card">
-            <h1 class="ps-2 position-relative">Start your search</h1>
+            <h1 class="ps-2 position-relative">Start searching</h1>
           </div>
         </div>
       </section>
