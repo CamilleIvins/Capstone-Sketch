@@ -58,7 +58,7 @@ import { computed } from 'vue';
 import { AppState } from '../AppState.js';
 import ModalWrapper from './ModalWrapper.vue';
 export default {
-    props: {stache: {type: Stache || Object, required: true}},
+    // props: {stache: {type: Stache || Object, required: true}},
   setup() {
     return {
       user: computed(()=> AppState.user)

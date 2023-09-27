@@ -35,7 +35,7 @@
 
 <script>
 export default{
-    props: {"modalActive"},
+    // props: {"modalActive"},
     setup()
     {
         return{}
