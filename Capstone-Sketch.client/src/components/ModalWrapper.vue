@@ -1,5 +1,9 @@
 <template>
-    
+    <transition name="modal-animation">
+<div v-show="modalActive" class="modal">
+
+</div>
+    </transition>
     <!-- Modal trigger button -->
 <!-- <button v-if="showButton" type="button" class="btn btn-outline-light frosted-card btn-lg" data-bs-toggle="modal" :data-bs-target="`#${id}`">
     <slot name="button">
@@ -28,3 +32,14 @@
 </div>
 
 </template>
+
+<script>
+export default{
+    props: {"modalActive"},
+    setup()
+    {
+        return{}
+    }
+}
+
+</script>

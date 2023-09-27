@@ -1,7 +1,8 @@
 <template>
-    <div class="about">
-    <h1>This is the Map page</h1>
-  </div>
+   <h1>
+    User Location Page
+   </h1>
+
   <!-- <head>
     <title>Simple Marker</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
