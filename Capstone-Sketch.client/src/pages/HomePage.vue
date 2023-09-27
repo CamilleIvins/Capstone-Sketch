@@ -172,6 +172,7 @@ box-shadow: 0 3px 3px -1px rgba(43, 43, 43, 0.85),
 .glass-card{
   border-radius: 10px;
   backdrop-filter: blur(3px);
+  background-color: rgba(245, 245, 245, 0.432);
 }
 .container,.container-fluid {
       outline: 2px double blue;
