@@ -21,6 +21,11 @@
             Map
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'Location' }" class="btn text-success lighten-30 selectable text-uppercase">
+            Location
+          </router-link>
+        </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <Login />

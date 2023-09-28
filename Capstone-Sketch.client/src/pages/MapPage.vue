@@ -1,6 +1,11 @@
 <template>
   <div class="container">
     <section class="row justify-content-center">
+      <div>
+        <h1>
+          TEST
+        </h1>
+      </div>
       <!-- <div class="col-6 bg-primary">
 qwerty
     </div> -->
@@ -15,9 +20,11 @@ qwerty
       </div>
     </section>
 
-    <section id="map">
 
-    </section>
+    <!-- THIS IS CAUSING PAGE FREEZE: position absolute issue -->
+    <!-- <section id="map">
+
+    </section> -->
 
   </div>
 </template>
@@ -25,9 +32,9 @@ qwerty
 <!-- video # 9 position absolute/relative -->
 
 <script>
-import axios, { Axios } from 'axios';
-import { AppState } from '../AppState';
-import { computed, reactive, onMounted } from 'vue';
+import axios from 'axios';
+// import { AppState } from '../AppState';
+// import { computed, reactive, onMounted } from 'vue';
 import { logger } from '../utils/Logger.js';
 export default {
 
@@ -36,6 +43,9 @@ export default {
       address: ""
     }
   },
+  // onMounted() {
+  //   this.locateButtonPressed()
+  // },
   setup() {
     return {
 
@@ -63,6 +73,8 @@ export default {
         }
       },
       async getAddressFrom(lat, long) {
+        //  yourkey: AIzaSyBifxFAXD3ecZoO52GpjV-STjO1LB1NnRg
+        // make AXIOS reference top of page || Mick's spellbook lecture
         axios.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyBifxFAXD3ecZoO52GpjV-STjO1LB1NnRg").then(response => {
           if (response.data.error_message) {
             logger.log(response.data.error_message)
@@ -71,13 +83,19 @@ export default {
             // [0] most precise input based on long/lat address, goes to general Idaho, USA
             logger.log(response.data.results[0].formatted_address);
           }
-        })
+        });
+      },
+
+      // NOT WORKING ⬇️
+      showUserLocationOnTheMap(latitude, longitude) {
+        // axios.google and just google both rooted in problem of being undefined
+        let map = new axios.google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: new axios.google.maps.LatLng(latitude, longitude),
+          mapTypeId: axios.google.maps.MapTypeId.ROADMAP
+        });
       }
 
-
-
-    },
-      showUserLocationOnTheMap(latitude, longitude) {
     }
   }
 };
@@ -96,5 +114,6 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
+  // background-color: red;
 }
 </style>
